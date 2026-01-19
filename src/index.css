@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-zinc-50 text-neutral font-sans antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display text-secondary font-bold;
+  }
+}
+
+/* Custom classes for animations or extra utilities */
+.text-script {
+  font-family:
+    "Great Vibes", cursive; /* Ensure this font is imported in index.html */
+}
