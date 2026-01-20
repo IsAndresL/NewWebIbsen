@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
 import Groups from './components/Groups';
+import Awards from './components/Awards';
 import Festival from './components/Festival';
 import Gallery from './components/Gallery';
 import Events from './components/Events';
@@ -32,6 +33,7 @@ function App() {
         <Hero />
         <About />
         <Groups />
+        <Awards />
         <Festival />
         <Gallery />
         <Events />
