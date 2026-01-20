@@ -1,5 +1,7 @@
 import React, { useState, useRef } from 'react';
-import heroVideo from '../assets/video/hero_background.mp4';
+import heroVideoMp4 from '../assets/video/hero_background.mp4';
+import heroVideoWebm from '../assets/video/hero_background.webm';
+import heroPoster from '../assets/img/hero_poster.jpg';
 import { FaVolumeMute, FaVolumeUp } from 'react-icons/fa';
 
 const Hero = () => {
@@ -107,11 +109,14 @@ const Hero = () => {
         ref={videoRef}
         autoPlay 
         loop 
-        muted={isMuted} // Controlled by state
+        muted={isMuted}
         playsInline 
+        preload="metadata"
+        poster={heroPoster}
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
       >
-        <source src={heroVideo} type="video/mp4" />
+        <source src={heroVideoMp4} type="video/mp4" />
+        <source src={heroVideoWebm} type="video/webm" />
         Your browser does not support the video tag.
       </video>
       <div className="absolute top-0 left-0 w-full h-full bg-black/40 z-10"></div> {/* Overlay */}
