@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import heroVideoMp4 from '../assets/video/hero_background.mp4';
 import heroVideoWebm from '../assets/video/hero_background.webm';
 import heroPoster from '../assets/img/hero_poster.jpg';
@@ -6,7 +6,15 @@ import { FaVolumeMute, FaVolumeUp } from 'react-icons/fa';
 
 const Hero = () => {
   const [isMuted, setIsMuted] = useState(true);
+  const [scrollY, setScrollY] = useState(0);
   const videoRef = useRef(null);
+
+  // Parallax Effect
+  useEffect(() => {
+    const handleParallax = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleParallax);
+    return () => window.removeEventListener('scroll', handleParallax);
+  }, []);
 
   React.useEffect(() => {
     // Scroll Volume Logic
@@ -121,8 +129,13 @@ const Hero = () => {
       </video>
       <div className="absolute top-0 left-0 w-full h-full bg-black/40 z-10"></div> {/* Overlay */}
 
-      {/* Content */}
-      <div className="relative z-20 text-center text-white px-4" data-aos="fade-up" data-aos-duration="1000">
+      {/* Content with Parallax Effect */}
+      <div 
+        className="relative z-20 text-center text-white px-4" 
+        data-aos="fade-up" 
+        data-aos-duration="1000"
+        style={{ transform: `translateY(${scrollY * 0.3}px)`, opacity: Math.max(0, 1 - scrollY / 500) }}
+      >
         <h2 className="text-xl md:text-2xl font-light uppercase tracking-[0.2em] mb-4 text-primary">Asociación Cultural </h2>
         <h1 className="text-5xl md:text-7xl font-script mb-6 leading-tight">
   Ibsen Díaz Viloria <br/>

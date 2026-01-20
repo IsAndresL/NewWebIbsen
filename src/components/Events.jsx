@@ -81,6 +81,7 @@ const Events = () => {
                 <img 
                   src={event.image} 
                   alt={event.title} 
+                  loading="lazy"
                   className="w-full h-full object-cover"
                   onError={(e) => {e.target.src='https://placehold.co/600x400?text=Event+Poster';}}
                 />

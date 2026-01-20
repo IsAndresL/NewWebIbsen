@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
+import Groups from './components/Groups';
 import Festival from './components/Festival';
 import Gallery from './components/Gallery';
 import Events from './components/Events';
@@ -10,6 +11,7 @@ import PQRS from './components/PQRS';
 import Transparency from './components/Transparency';
 import Location from './components/Location';
 import Footer from './components/Footer';
+import WhatsAppButton from './components/WhatsAppButton';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -29,6 +31,7 @@ function App() {
       <main>
         <Hero />
         <About />
+        <Groups />
         <Festival />
         <Gallery />
         <Events />
@@ -38,6 +41,7 @@ function App() {
         <Location />
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }
