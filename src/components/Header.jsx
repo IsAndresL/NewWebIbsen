@@ -20,6 +20,7 @@ const Header = () => {
     { name: 'Galería', href: '#gallery' },
     { name: 'Eventos', href: '#events' },
     { name: 'PQRS', href: '#pqrs' },
+    { name: 'Transparencia', href: '#transparency' },
     { name: 'Contacto', href: '#contact' },
   ];
 

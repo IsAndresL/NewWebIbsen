@@ -13,6 +13,11 @@ const Footer = () => {
               © {new Date().getFullYear()} Asociación Cultural Ibsen Díaz Viloria.<br/>
               Todos los derechos reservados.
             </p>
+            <div className="flex gap-4 mt-3 text-sm justify-center md:justify-start">
+              <a href="#pqrs" className="text-gray-300 hover:text-primary transition-colors">PQRS</a>
+              <span className="text-gray-500">|</span>
+              <a href="#transparency" className="text-gray-300 hover:text-primary transition-colors">Transparencia</a>
+            </div>
             <p className="text-gray-400 text-xs mt-2">Desarrollado por Ing. Andres Luna</p>
           </div>
 
