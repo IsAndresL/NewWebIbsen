@@ -32,7 +32,7 @@ const Location = () => {
         <div className="flex items-start">
             <FaClock className="text-secondary mt-1 mr-3 text-xl" />
             <p className="text-gray-600">
-                <strong>Horario de Ensayos:</strong><br/>
+                <strong>Horario de atencion:</strong><br/>
                 Lun - Vie: 4:00 PM - 8:00 PM<br/>
                 Sáb: 9:00 AM - 1:00 PM
             </p>
