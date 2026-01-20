@@ -6,6 +6,7 @@ import Festival from './components/Festival';
 import Gallery from './components/Gallery';
 import Events from './components/Events';
 import Social from './components/Social';
+import PQRS from './components/PQRS';
 import Location from './components/Location';
 import Footer from './components/Footer';
 
@@ -31,6 +32,7 @@ function App() {
         <Gallery />
         <Events />
         <Social />
+        <PQRS />
         <Location />
       </main>
       <Footer />
