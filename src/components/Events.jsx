@@ -1,6 +1,8 @@
 import React from 'react';
 import { FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa';
-import eventPoster from '../assets/img/event_poster.jpg'; // Placeholder
+import eventImage1 from '../assets/img/events/event_1.jpg';
+import eventImage2 from '../assets/img/events/event_2.jpg';
+import eventImage3 from '../assets/img/events/event_3.jpg';
 
 const Events = () => {
   const events = [
@@ -8,24 +10,56 @@ const Events = () => {
       id: 1,
       title: "Gran Parada de Tradición",
       date: "20 Febrero, 2026",
+      isoDate: "20260220T140000",
       location: "Santa Marta, Magdalena",
-      image: eventPoster
+      image: eventImage1,
+      description: "Acompaña a ASOCURID en la tradicional Gran Parada folclórica."
     },
     {
       id: 2,
       title: "Festival del Banano",
       date: "15 Marzo, 2026",
+      isoDate: "20260315T090000",
       location: "Riofrío, Zona Bananera",
-      image: eventPoster
+      image: eventImage2,
+      description: "Celebración cultural en el corazón de la zona bananera."
     },
     {
       id: 3,
       title: "Clausura Cultural 2026",
       date: "10 Diciembre, 2026",
+      isoDate: "20261210T180000",
       location: "Teatro Cajamag",
-      image: eventPoster
+      image: eventImage3,
+      description: "Gala de cierre de actividades anuales de ASOCURID."
     }
   ];
+
+  const addToGoogleCalendar = (event) => {
+      const title = encodeURIComponent(event.title);
+      const details = encodeURIComponent(event.description);
+      const location = encodeURIComponent(event.location);
+      // Constructing Google Calendar URL
+      // Dates format: YYYYMMDDTHHMMSSZ (UTC) or floating time
+      // Simple approximation: using floating time (no Z)
+      const startDate = event.isoDate; 
+      const endDate = String(Number(event.isoDate) + 20000); // +2 hours roughly (dummy logic for numbers strings)
+      // Correct logic: manually construct end time or just use start time + 2 hours
+      // Let's use specific pre-calculated strings or a cleaner JS manipulation if complex.
+      // For simplicity in this static array, I'll pass simple strings.
+      // Actually, let's fix the End Date logic properly below.
+      
+      // Let's assume duration is 3 hours for all events
+      // Correct way: Parse ISO, add 3 hours, reformat. 
+      // Fast way for this snippet:
+      // event.isoDate is "20260220T140000". 
+      // End date: "20260220T170000".
+      const endDateVal = event.isoDate.replace(/T(\d{2})/, (match, p1) => `T${String(Number(p1)+3).padStart(2, '0')}`);
+
+      const url = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${startDate}/${endDateVal}&details=${details}&location=${location}&sf=true&output=xml`;
+      
+      window.open(url, '_blank');
+  };
 
   return (
     <section id="events" className="py-20 bg-white">
@@ -68,7 +102,10 @@ const Events = () => {
                   <span className="text-sm">{event.location}</span>
                 </div>
 
-                <button className="w-full py-2 border-2 border-secondary text-secondary font-bold rounded-lg hover:bg-secondary hover:text-white transition-colors">
+                <button 
+                  onClick={() => addToGoogleCalendar(event)}
+                  className="w-full py-2 border-2 border-secondary text-secondary font-bold rounded-lg hover:bg-secondary hover:text-white transition-colors"
+                >
                   Añadir a Calendario
                 </button>
               </div>

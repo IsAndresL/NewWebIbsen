@@ -69,7 +69,9 @@ const Festival = () => {
                         </div>
 
                         <a 
-                            href="#contact" 
+                            href="https://wa.me/573135650328" 
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="inline-flex items-center px-8 py-4 bg-neutral text-white font-bold rounded-full shadow-lg hover:shadow-xl hover:bg-neutral/90 transition-all transform hover:-translate-y-1"
                         >
                             <span>Más Información</span>

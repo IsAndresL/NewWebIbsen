@@ -2,7 +2,7 @@ import { FaMapMarkedAlt, FaClock } from 'react-icons/fa';
 
 const Location = () => {
   return (
-    <section id="location" className="relative h-[500px] w-full bg-gray-200">
+    <section id="contact" className="relative h-[600px] w-full bg-gray-200">
       {/* Map Iframe with grayscale filter for style */}
       <iframe
         title="Ubicación ASOCURID"
@@ -17,6 +17,7 @@ const Location = () => {
 
       {/* Floating Card */}
       <div className="absolute bottom-8 left-4 md:bottom-16 md:left-16 z-10 bg-white p-8 rounded-xl shadow-2xl max-w-sm border-l-4 border-secondary animate-fade-in-up">
+        <h4 className="text-secondary font-bold font-display uppercase tracking-widest mb-1">Ubicación</h4>
         <h3 className="text-2xl font-display font-bold text-neutral mb-4">Nuestra Sede</h3>
         
         <div className="flex items-start mb-4">
