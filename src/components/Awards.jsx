@@ -28,7 +28,7 @@ const Awards = () => {
       year: 2022,
       title: "Premio de Danzas",
       event: "Festival de danzas",
-      location: "Ciudad de Panamá",
+      location: "---------",
       icon: <FaCrown />,
       color: "from-purple-400 to-purple-600",
       description: "----------------------."

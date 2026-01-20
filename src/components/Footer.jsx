@@ -18,7 +18,9 @@ const Footer = () => {
               <span className="text-gray-500">|</span>
               <a href="#transparency" className="text-gray-300 hover:text-primary transition-colors">Transparencia</a>
             </div>
-            <p className="text-gray-400 text-xs mt-2">Desarrollado por Ing. Andres Luna</p>
+            <p className="text-gray-400 text-xs mt-4">
+              Desarrollado por <a href="https://wa.me/573128919009" target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary font-semibold transition-colors">Ing. Andres Luna</a>
+            </p>
           </div>
 
           <div className="flex flex-col md:items-end gap-4">

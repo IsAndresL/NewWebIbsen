@@ -8,30 +8,30 @@ const Events = () => {
   const events = [
     {
       id: 1,
-      title: "Gran Parada de Tradición",
-      date: "20 Febrero, 2026",
-      isoDate: "20260220T140000",
-      location: "Santa Marta, Magdalena",
+      title: "Carnaval de Barranquilla",
+      date: "23 Enero, 2026",
+      isoDate: "20260123T140000",
+      location: "Barranquilla, Colombia",
       image: eventImage1,
-      description: "Acompaña a ASOCURID en la tradicional Gran Parada folclórica."
+      description: "Acompaña a ASOCURID en la busca de su tercer congo de oro."
     },
     {
       id: 2,
-      title: "Festival del Banano",
+      title: "------------",
       date: "15 Marzo, 2026",
       isoDate: "20260315T090000",
       location: "Riofrío, Zona Bananera",
       image: eventImage2,
-      description: "Celebración cultural en el corazón de la zona bananera."
+      description: "------------"
     },
     {
       id: 3,
-      title: "Clausura Cultural 2026",
+      title: "------------",
       date: "10 Diciembre, 2026",
       isoDate: "20261210T180000",
       location: "Teatro Cajamag",
       image: eventImage3,
-      description: "Gala de cierre de actividades anuales de ASOCURID."
+      description: "------------"
     }
   ];
 
