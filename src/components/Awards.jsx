@@ -8,12 +8,12 @@ const Awards = () => {
   const awards = [
     {
       year: 2024,
-      title: "Mejor Agrupación Folclórica",
-      event: "Festival Nacional de Danzas",
-      location: "Bogotá, Colombia",
+      title: "Congo de oro",
+      event: "Carnaval de barranquilla",
+      location: "Barranquilla, Colombia",
       icon: <FaTrophy />,
       color: "from-yellow-400 to-amber-500",
-      description: "Primer lugar en la categoría de danzas tradicionales del Caribe colombiano."
+      description: "2do Congo de oro en el carnaval de barranquilla, con la danza del ciempies"
     },
     {
       year: 2023,
@@ -26,39 +26,39 @@ const Awards = () => {
     },
     {
       year: 2022,
-      title: "Premio Iberoamericano de Danzas",
-      event: "Festival Internacional de Panamá",
+      title: "Premio de Danzas",
+      event: "Festival de danzas",
       location: "Ciudad de Panamá",
       icon: <FaCrown />,
       color: "from-purple-400 to-purple-600",
-      description: "Máximo galardón como mejor agrupación internacional invitada."
+      description: "----------------------."
     },
     {
       year: 2021,
-      title: "Patrimonio Cultural Vivo",
-      event: "Ministerio de Cultura",
+      title: "-----------",
+      event: "------------------------",
       location: "Colombia",
       icon: <FaGem />,
       color: "from-teal-400 to-teal-600",
-      description: "Declaratoria como patrimonio cultural inmaterial de la región."
+      description: "------------------------------"
     },
     {
       year: 2019,
-      title: "Mejor Coreografía",
-      event: "Festival del Caimán Cienaguero",
-      location: "Ciénaga, Magdalena",
+      title: "-----------",
+      event: "------------------------",
+      location: "----------------------",
       icon: <FaStar />,
       color: "from-orange-400 to-red-500",
-      description: "Premio especial por innovación en la puesta en escena tradicional."
+      description: "------------------------------"
     },
     {
       year: 2018,
-      title: "Embajadores Culturales",
-      event: "Alcaldía Zona Bananera",
-      location: "Riofrío",
+      title: "-----------",
+      event: "------------------------",
+      location: "----------------------",
       icon: <FaAward />,
       color: "from-green-400 to-emerald-600",
-      description: "Nombramiento oficial como embajadores culturales del municipio."
+      description: "------------------------------"
     }
   ];
 
@@ -165,9 +165,9 @@ const Awards = () => {
         {/* Stats Counter */}
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto" data-aos="fade-up">
           {[
-            { number: "15+", label: "Premios Nacionales", icon: <FaTrophy /> },
-            { number: "6", label: "Reconocimientos Internacionales", icon: <FaMedal /> },
-            { number: "25+", label: "Años de Trayectoria", icon: <FaStar /> },
+            { number: "20+", label: "Premios Nacionales", icon: <FaTrophy /> },
+            { number: "+10", label: "Reconocimientos", icon: <FaMedal /> },
+            { number: "20+", label: "Años de Trayectoria", icon: <FaStar /> },
             { number: "100+", label: "Presentaciones", icon: <FaAward /> }
           ].map((stat, index) => (
             <div 
